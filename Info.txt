@@ -1,0 +1,5 @@
+Student_id : 2313111037
+Student Name: Manussanan Rattanakietkhajorn
+Major: IT
+Level: 1
+Faculty: Information Technology
