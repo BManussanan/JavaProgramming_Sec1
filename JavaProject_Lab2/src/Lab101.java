@@ -1,21 +1,26 @@
-import java.text.*;
-import javax.swing.*;
+import java.text.DecimalFormat;
+import java.util.Scanner;
 public class Lab101 {
 
 	public static void main(String[] args) {
 		DecimalFormat frm = new DecimalFormat("#,###.00");
-		String productName = JOptionPane.showInputDialog("Input Product Name : ");
-		int productUnit = Integer.parseInt(System.out.print("Input Product Unit : "));
-		float productPerUnit = Float.parseFloat(System.out.print("Input Price per unit : "));
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input Product Name : ");
+		String productName = input.nextLine();
+		System.out.print("Input Product Unit : ");
+		int productUnit = input.nextInt();
+		System.out.print("Input Price per unit : ");
+		float productPerUnit = input.nextInt();
 		System.out.println("---------------------------------------------");
 		float totalPrice = productUnit*productPerUnit;
-		System.out.println("Total Price is "+totalPrice+" baht.");
+		System.out.println("Total Price is "+frm.format(totalPrice)+" baht.");
 		System.out.println("---------------------------------------------");
-		int vat = Integer.parseInt(System.out.print("How many discount (%) : "));
+		System.out.print("How many discount (%) : ");
+		int discount = input.nextInt();
 		System.out.println("---------------------------------------------");
-		float discount = totalPrice*15/100;
-		float total = totalPrice-discount;
-		System.out.println("Discount from 15%\t"+discount+" baht."+"\nAmount to be paid\t"+total+"baht");
+		double totaldiscount = totalPrice*discount/100;
+		double total = totalPrice-totaldiscount;
+		System.out.println("Discount from 15%\t"+frm.format(totaldiscount)+" baht."+"\nAmount to be paid\t"+frm.format(total)+" baht");
 
 	}
 
