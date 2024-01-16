@@ -1,4 +1,4 @@
 Id:2313111037
 Name-Surname:Manussanan Rattanakietkhajorn
-Date: Jan-09-2024
-Topic: Class and Object
+Date: Jan-16-2024
+Topic: Encapsulation Concept
